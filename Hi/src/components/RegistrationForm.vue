@@ -1,32 +1,39 @@
 <template>
-  
-  <div class="main min-h-screen flex justify-center items-center">
-    <div class="bg-white p-8 max-w-md rounded-3xl border-2 border-black	">
-      <form  @submit.prevent="submitForm">
-        <div class="mb-4">
-          <label class="block text-black text-sm font-bold mb-2" for="name">Name</label>
-          <input type="text" v-model="info.name" id="name" class=" border-black	 rounded w-full py-2 px-3 text-black  border-2" />
-        </div>
+  <div class="main min-h-screen flex justify-center items-center bg-pink-50">
+    <div class="container flex w-3/4 bg-gray-100 rounded-3xl shadow-lg">
+      <form @submit.prevent="submitForm" class="w-1/2 p-8">
+        <div class="p-8 rounded-3xl  w-full h-full flex flex-col justify-center">
+          <h2 class="text-2xl font-bold mb-6 text-center col-span-2">Registration Form</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="mb-4 col-span-2">
+              <label class="block text-sm font-bold mb-2" for="name">Name</label>
+              <input type="text" v-model="info.name" id="name" class="border-pink-800 rounded w-full py-2 px-3 focus:outline-none border-2" required />
+            </div>
 
-        <div class="mb-4">
-          <label class="block text-black text-sm font-bold mb-2" for="email">Email</label>
-          <input type="email" v-model="info.email" id="email" class=" border-black	 rounded w-full py-2 px-3 text-black border-2 " />
-        </div>
+            <div class="mb-4 col-span-2">
+              <label class="block text-sm font-bold mb-2" for="email">Email</label>
+              <input type="email" v-model="info.email" id="email" class="border-pink-800 rounded w-full py-2 px-3 focus:outline-none border-2" required />
+            </div>
 
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-          <input type="password" v-model="info.password" id="password" class=" border-black	 rounded w-full py-2 px-3 text-black border-2" />
-        </div>
+            <div class="mb-4 col-span-2">
+              <label class="block text-sm font-bold mb-2" for="password">Password</label>
+              <input type="password" v-model="info.password" id="password" class="border-pink-800 rounded w-full py-2 px-3 focus:outline-none border-2" required />
+            </div>
 
-        <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
-          <input type="tel" v-model="info.phone" id="phone" class=" border-black	 rounded w-full py-2 px-3 text-black border-2"/>
-        </div>
+            <div class="mb-4 col-span-2">
+              <label class="block text-sm font-bold mb-2" for="phone">Phone</label>
+              <input type="tel" v-model="info.phone" id="phone" class="border-pink-800 rounded w-full py-2 px-3 focus:outline-none border-2" required />
+            </div>
+          </div>
 
-        <div class="flex items-center justify-center">
-          <button type="submit" class=" bg-pink-800 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+          <div class="flex items-center justify-center mt-6">
+            <button type="submit" class="bg-pink-800 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+          </div>
         </div>
       </form>
+      <div class="flex justify-center items-center w-1/2">
+        <img src="../assets/pink.jpg" class="h-full object-cover rounded-2xl">
+      </div>
     </div>
   </div>
 </template>
